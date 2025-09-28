@@ -25,9 +25,9 @@ Program ini dibangun menggunakan struktur **multi-class dan multi-package**, ser
 ## Struktur Packages
 Program ini dibagi menjadi 3 package utama:
 
-- `model` → berisi class `Armada.java` sebagai superclass, serta subclass `ArmadaDomestik.java` dan `ArmadaInternasional.java`  
-- `service` → berisi class `ArmadaService.java` yang menangani logika CRUD, validasi, dan pencarian  
-- `main` → berisi class `Main.java` sebagai antarmuka pengguna (menu interaktif)
+- `model` => berisi class `Armada.java` sebagai superclass, serta subclass `ArmadaDomestik.java` dan `ArmadaInternasional.java`  
+- `service` => berisi class `ArmadaService.java` yang menangani logika CRUD, validasi, dan pencarian  
+- `main` => berisi class `Main.java` sebagai antarmuka pengguna (menu interaktif)
 
 ## Penerapan MVC (Model–View–Controller)
 
@@ -45,25 +45,26 @@ Program ini sudah menerapkan arsitektur **MVC**, yang memisahkan peran masing-ma
 
 ## Penerapan Abstraction
 Program ini menggunakan kombinasi abstract class dan interface:
-- ArmadaBase.java → abstract class yang menjadi superclass untuk semua jenis armada.
+- `ArmadaBase.java` => abstract class yang menjadi superclass untuk semua jenis armada.
 Memuat method abstract getKategori() yang wajib dioverride oleh subclass.
-- Operasional.java → interface yang digunakan oleh ArmadaDomestik dan ArmadaInternasional untuk mendefinisikan method jadwalOperasi().
+- `Operasional.java` => interface yang digunakan oleh ArmadaDomestik dan ArmadaInternasional untuk mendefinisikan method jadwalOperasi().
 Dengan ini, program memenuhi nilai tambah karena menggunakan abstract class dan interface secara bersamaan.
 
 ## Penerapan Polymorphism
 Program ini menerapkan dua bentuk polymorphism:
 - Overriding
 
-Method getInfo() dioverride di:
-- Armada.java
-- ArmadaDomestik.java
-- ArmadaInternasional.java
+Method `getInfo()` dioverride di:
+- `Armada.java`
+- `ArmadaDomestik.java`
+- `ArmadaInternasional.java`
+
 Tujuannya agar informasi yang ditampilkan sesuai dengan jenis armada masing-masing.
 
 - Overloading
-Method tambahArmada() di ArmadaService.java memiliki dua versi:
-- tambahArmada(String id, String tipe, int kapasitas)
-- tambahArmada(String id, String tipe) → versi default kapasitas 100
+Method `tambahArmada()` di `ArmadaService.java` memiliki dua versi:
+- `tambahArmada` `(String id, String tipe, int kapasitas)`
+- `tambahArmada` `(String id, String tipe)` => versi default kapasitas 100
 
 ## Fitur Program
 1. **Tambah Armada Biasa** – Menambahkan data pesawat tanpa subclass  
