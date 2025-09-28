@@ -53,7 +53,7 @@ Dengan ini, program memenuhi nilai tambah karena menggunakan abstract class dan 
 ## Penerapan Polymorphism
 Program ini menerapkan dua bentuk polymorphism:
 
-- Overriding
+1. Overriding
 
 Method `getInfo()` dioverride di:
 - `Armada.java`
@@ -62,7 +62,7 @@ Method `getInfo()` dioverride di:
 
 Tujuannya agar informasi yang ditampilkan sesuai dengan jenis armada masing-masing.
 
-- Overloading
+2. Overloading
 
 Method `tambahArmada()` di `ArmadaService.java` memiliki dua versi:
 - `tambahArmada` `(String id, String tipe, int kapasitas)`
